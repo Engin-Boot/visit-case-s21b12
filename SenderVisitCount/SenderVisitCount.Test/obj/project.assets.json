@@ -1690,9 +1690,6 @@
       "SenderVisitCount/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
-        "dependencies": {
-          "Microsoft.NETCore.App": "2.1.0"
-        },
         "compile": {
           "bin/placeholder/SenderVisitCount.dll": {}
         },
@@ -5979,11 +5976,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\320088274\\Source\\Repos\\visit-case-s21b123\\SenderVisitCount\\SenderVisitCount.Test\\SenderVisitCount.Test.csproj",
+      "projectUniqueName": "C:\\Users\\320088274\\source\\repos\\visit-case-s21b123\\SenderVisitCount\\SenderVisitCount.Test\\SenderVisitCount.Test.csproj",
       "projectName": "SenderVisitCount.Test",
-      "projectPath": "C:\\Users\\320088274\\Source\\Repos\\visit-case-s21b123\\SenderVisitCount\\SenderVisitCount.Test\\SenderVisitCount.Test.csproj",
+      "projectPath": "C:\\Users\\320088274\\source\\repos\\visit-case-s21b123\\SenderVisitCount\\SenderVisitCount.Test\\SenderVisitCount.Test.csproj",
       "packagesPath": "C:\\Users\\320088274\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\320088274\\Source\\Repos\\visit-case-s21b123\\SenderVisitCount\\SenderVisitCount.Test\\obj\\",
+      "outputPath": "C:\\Users\\320088274\\source\\repos\\visit-case-s21b123\\SenderVisitCount\\SenderVisitCount.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6002,8 +5999,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\320088274\\Source\\Repos\\visit-case-s21b123\\SenderVisitCount\\SenderVisitCount\\SenderVisitCount.csproj": {
-              "projectPath": "C:\\Users\\320088274\\Source\\Repos\\visit-case-s21b123\\SenderVisitCount\\SenderVisitCount\\SenderVisitCount.csproj"
+            "C:\\Users\\320088274\\source\\repos\\visit-case-s21b123\\SenderVisitCount\\SenderVisitCount\\SenderVisitCount.csproj": {
+              "projectPath": "C:\\Users\\320088274\\source\\repos\\visit-case-s21b123\\SenderVisitCount\\SenderVisitCount\\SenderVisitCount.csproj"
             }
           }
         }
@@ -6022,6 +6019,7 @@
             "version": "[15.9.0, )"
           },
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
@@ -6048,10 +6046,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

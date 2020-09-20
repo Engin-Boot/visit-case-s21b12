@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\ReceiverVisitCount",
     "\\SenderVisitCount"
   ],
+  "SelectedNode": "\\ReceiverVisitCount\\ReceiverVisitCount.sln",
   "PreviewInSolutionExplorer": false
 }

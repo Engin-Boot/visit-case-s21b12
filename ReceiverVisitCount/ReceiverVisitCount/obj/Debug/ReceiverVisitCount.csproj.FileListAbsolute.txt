@@ -5,3 +5,10 @@ C:\Users\deeks\OneDrive\Desktop\Receiver\ReceiverVisitCount\ReceiverVisitCount\o
 C:\Users\deeks\OneDrive\Desktop\Receiver\ReceiverVisitCount\ReceiverVisitCount\obj\Debug\ReceiverVisitCount.csproj.CoreCompileInputs.cache
 C:\Users\deeks\OneDrive\Desktop\Receiver\ReceiverVisitCount\ReceiverVisitCount\obj\Debug\ReceiverVisitCount.exe
 C:\Users\deeks\OneDrive\Desktop\Receiver\ReceiverVisitCount\ReceiverVisitCount\obj\Debug\ReceiverVisitCount.pdb
+C:\Users\320088274\source\repos\visit-case-s21b123\ReceiverVisitCount\ReceiverVisitCount\bin\Debug\ReceiverVisitCount.exe.config
+C:\Users\320088274\source\repos\visit-case-s21b123\ReceiverVisitCount\ReceiverVisitCount\bin\Debug\ReceiverVisitCount.exe
+C:\Users\320088274\source\repos\visit-case-s21b123\ReceiverVisitCount\ReceiverVisitCount\bin\Debug\ReceiverVisitCount.pdb
+C:\Users\320088274\source\repos\visit-case-s21b123\ReceiverVisitCount\ReceiverVisitCount\obj\Debug\ReceiverVisitCount.csprojAssemblyReference.cache
+C:\Users\320088274\source\repos\visit-case-s21b123\ReceiverVisitCount\ReceiverVisitCount\obj\Debug\ReceiverVisitCount.csproj.CoreCompileInputs.cache
+C:\Users\320088274\source\repos\visit-case-s21b123\ReceiverVisitCount\ReceiverVisitCount\obj\Debug\ReceiverVisitCount.exe
+C:\Users\320088274\source\repos\visit-case-s21b123\ReceiverVisitCount\ReceiverVisitCount\obj\Debug\ReceiverVisitCount.pdb

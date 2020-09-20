@@ -20,3 +20,15 @@ C:\Users\320088274\Source\Repos\visit-case-s21b122\SenderVisitCount\SenderVisitC
 C:\Users\320088274\Source\Repos\visit-case-s21b122\SenderVisitCount\SenderVisitCount\obj\Debug\netcoreapp2.1\SenderVisitCount.AssemblyInfo.cs
 C:\Users\320088274\Source\Repos\visit-case-s21b122\SenderVisitCount\SenderVisitCount\obj\Debug\netcoreapp2.1\SenderVisitCount.dll
 C:\Users\320088274\Source\Repos\visit-case-s21b122\SenderVisitCount\SenderVisitCount\obj\Debug\netcoreapp2.1\SenderVisitCount.pdb
+C:\Users\320088274\source\repos\visit-case-s21b123\SenderVisitCount\SenderVisitCount\bin\Debug\netcoreapp2.1\SenderVisitCount.deps.json
+C:\Users\320088274\source\repos\visit-case-s21b123\SenderVisitCount\SenderVisitCount\bin\Debug\netcoreapp2.1\SenderVisitCount.runtimeconfig.json
+C:\Users\320088274\source\repos\visit-case-s21b123\SenderVisitCount\SenderVisitCount\bin\Debug\netcoreapp2.1\SenderVisitCount.runtimeconfig.dev.json
+C:\Users\320088274\source\repos\visit-case-s21b123\SenderVisitCount\SenderVisitCount\bin\Debug\netcoreapp2.1\SenderVisitCount.dll
+C:\Users\320088274\source\repos\visit-case-s21b123\SenderVisitCount\SenderVisitCount\bin\Debug\netcoreapp2.1\SenderVisitCount.pdb
+C:\Users\320088274\source\repos\visit-case-s21b123\SenderVisitCount\SenderVisitCount\obj\Debug\netcoreapp2.1\SenderVisitCount.csprojAssemblyReference.cache
+C:\Users\320088274\source\repos\visit-case-s21b123\SenderVisitCount\SenderVisitCount\obj\Debug\netcoreapp2.1\SenderVisitCount.AssemblyInfoInputs.cache
+C:\Users\320088274\source\repos\visit-case-s21b123\SenderVisitCount\SenderVisitCount\obj\Debug\netcoreapp2.1\SenderVisitCount.AssemblyInfo.cs
+C:\Users\320088274\source\repos\visit-case-s21b123\SenderVisitCount\SenderVisitCount\obj\Debug\netcoreapp2.1\SenderVisitCount.csproj.CoreCompileInputs.cache
+C:\Users\320088274\source\repos\visit-case-s21b123\SenderVisitCount\SenderVisitCount\obj\Debug\netcoreapp2.1\SenderVisitCount.dll
+C:\Users\320088274\source\repos\visit-case-s21b123\SenderVisitCount\SenderVisitCount\obj\Debug\netcoreapp2.1\SenderVisitCount.pdb
+C:\Users\320088274\source\repos\visit-case-s21b123\SenderVisitCount\SenderVisitCount\obj\Debug\netcoreapp2.1\SenderVisitCount.genruntimeconfig.cache
