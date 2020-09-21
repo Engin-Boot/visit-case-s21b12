@@ -11,7 +11,7 @@ namespace ReceiverVisitCount
         {
             try
             {
-
+                 Receiver receive = new Receiver();
                  var dataReceive = new DataReceive();
 
                  var receivedDataList = dataReceive.ReceiveData();
