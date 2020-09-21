@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 
@@ -6,21 +6,17 @@ namespace ReceiverVisitCount
 {
    public class TimeSplit
     {
-        public List<string> HourList { get; set; }
-        public List<string> MinuteList { get; set; }
-        public List<string> SecondList { get; set; }
-        public bool IsTimeSplit { get; set; }
+        public List<string> HourList { get; private set; }
+        public bool IsTimeSplit { get; private set; }
 
         public TimeSplit(List<string> timeList)
         {
             IsTimeSplit = false;
             HourList = new List<string>();
-            MinuteList = new List<string>();
-            SecondList = new List<string>();
             TimeSplitIntoHourMinuteSecond(timeList);
             IsTimeSplit = true;
         }
-        public bool TimeSplitIntoHourMinuteSecond(List<string> timeList)
+        private void TimeSplitIntoHourMinuteSecond(List<string> timeList)
         {
             try
             {
@@ -28,10 +24,7 @@ namespace ReceiverVisitCount
                 {
                     var date = i.Split(':');
                     HourList.Add(date[0]);
-                    MinuteList.Add(date[1]);
-                    SecondList.Add(date[2]);
                 }
-                return true;
             }
             catch (Exception e)
             {
