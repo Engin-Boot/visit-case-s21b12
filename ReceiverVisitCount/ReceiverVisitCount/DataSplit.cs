@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 
@@ -6,10 +6,10 @@ namespace ReceiverVisitCount
 {
     public class DataSplit
     {
-        public List<string> DateList { get; set; }
-        public List<string> TimeList { get; set; }
+        public List<string> DateList { get; private set; }
+        public List<string> TimeList { get; private set; }
 
-        public bool IsDataSplit { get; set; }
+        public bool IsDataSplit { get; private set; }
 
         public DataSplit(List<string> receiveDataList)
         {
@@ -20,7 +20,7 @@ namespace ReceiverVisitCount
             IsDataSplit = true;
         }
 
-        public void SplitDataIntoDateAndTime(List<string> receiveDataList)
+        private void SplitDataIntoDateAndTime(List<string> receiveDataList)
         {
             try 
             {
@@ -43,4 +43,3 @@ namespace ReceiverVisitCount
         }
     }
 }
-
