@@ -6,8 +6,8 @@ namespace ReceiverVisitCount
 {
     public class DataSplit
     {
-        public List<string> DateList { get; private set; }
-        public List<string> TimeList { get; private set; }
+        public List<string> DateList { get;}
+        public List<string> TimeList { get;}
 
         public bool IsDataSplit { get; private set; }
 
