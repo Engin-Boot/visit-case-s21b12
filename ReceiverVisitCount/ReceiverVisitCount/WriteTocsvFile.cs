@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Globalization;
 using System.IO;
 using System.Text;
@@ -35,9 +35,9 @@ namespace ReceiverVisitCount
                 var myValue = aggregateData.ToString(invC);
 
 
-                var headerLine = string.Format("{0},{1},{2},{3}\n", dayHeader, monthHeader, yearHeader, valueHeader);
+                var headerLine = string.Format($"{dayHeader}, {monthHeader}, {yearHeader}, {valueHeader}\n");
                 csv.Append(headerLine);
-                var dataLine = string.Format("{0},{1},{2},{3}", myDay, myMonth, myYear, myValue);
+                var dataLine = string.Format($"{myDay}, {myMonth}, {myYear}, {myValue}");
                 csv.Append(dataLine);
 
                 File.WriteAllText(csvOutputFilePath, csv.ToString());
@@ -64,9 +64,9 @@ namespace ReceiverVisitCount
                 var myMonth = month.ToString();
                 var myValue = peakValue.ToString();
 
-                var headerLine = string.Format("{0},{1}\n", monthHeader, valueHeader);
+                var headerLine = string.Format($"{monthHeader}, {valueHeader}\n");
                 csv.Append(headerLine);
-                var dataLine = string.Format("{0},{1}", myMonth, myValue);
+                var dataLine = string.Format($"{myMonth}, {myValue}");
                 csv.Append(dataLine);
 
                 File.WriteAllText(csvOutputFilePath, csv.ToString());
