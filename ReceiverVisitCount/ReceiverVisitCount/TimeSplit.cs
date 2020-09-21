@@ -6,8 +6,8 @@ namespace ReceiverVisitCount
 {
    public class TimeSplit
     {
-        public List<string> HourList { get; private set; }
-        public bool IsTimeSplit { get; private set; }
+        public List<string> HourList { get; }
+        public bool IsTimeSplit { get;}
 
         public TimeSplit(List<string> timeList)
         {
