@@ -9,7 +9,7 @@ namespace ReceiverVisitCount
         public List<string> DateList { get;}
         public List<string> TimeList { get;}
 
-        public bool IsDataSplit { get; private set; }
+        public bool IsDataSplit { get;}
 
         public DataSplit(List<string> receiveDataList)
         {
