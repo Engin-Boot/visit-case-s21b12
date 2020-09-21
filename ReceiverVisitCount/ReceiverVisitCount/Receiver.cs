@@ -1,45 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+
+
 
 namespace ReceiverVisitCount
 {
     public class Receiver
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             try
             {
 
-                List<string> ReceivedDataList = new List<string>();
-                DataReceive datareceive = new DataReceive();
+                 var dataReceive = new DataReceive();
 
-                ReceivedDataList = datareceive.ReceiveData();
+                 var receivedDataList = dataReceive.ReceiveData();
 
-                DataSplit splitdata = new DataSplit(ReceivedDataList);
-                List<string> dateList = splitdata.dateList;
-                List<string> timeList = splitdata.timeList;
-
-                TimeSplit splittime = new TimeSplit(timeList);
-                List<string> hourList = splittime.hourList;
-                List<string> minuteList = splittime.minuteList;
-                List<string> secondList = splittime.secondList;
-
-                Aggregator getAggregate = new Aggregator();
-
-                string date = "1/9/2020";
-                var perHourAvgInADay = getAggregate.getAvgPerHourInADay(date, dateList, hourList);
-
-                string startdate = "1/9/2020";
-                var avgFootfallInAWeek = getAggregate.getAvgDailyFootfallInAWeek(startdate, dateList);
-
-                var peakFootfallLastMonth = getAggregate.peakDailyFoofallInLastMonth(dateList);
+                 var splitData = new DataSplit(receivedDataList);
+                 var dateList = splitData.DateList;
+                 var timeList = splitData.TimeList;
+ 
+                 var splitTime = new TimeSplit(timeList);
+                 var hourList = splitTime.HourList;
+                 
+ 
+                 var getAggregate = new Aggregator();
+ 
+                 const string date = "1/9/2020";
+                 getAggregate.GetAvgPerHourInADay(date, dateList, hourList);
+ 
+                 const string startDate = "1/9/2020";
+                 getAggregate.GetAvgDailyFootfallInAWeek(startDate, dateList);
+ 
+                 getAggregate.PeakDailyFooFallInLastMonth(dateList);
             }
             catch(Exception e)
             {
-                Console.WriteLine(e + "Fuctions do not Work");
+                Console.WriteLine(e + " Functions do not Work");
             }
         }
     }

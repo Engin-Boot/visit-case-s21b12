@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ReceiverVisitCount
 {
@@ -12,27 +8,19 @@ namespace ReceiverVisitCount
     {
         public List<string> ReceiveData()
         {
-            List<string> ReceiverDataList = new List<string>();
-            
-           // var reader = new StreamReader(File.OpenRead("C:/Users/deeks/OneDrive/Desktop/Footfall_Dataset.csv")); //extra
+            var receiverDataList = new List<string>();
 
-            try
-           {
-                /*while (!reader.EndOfStream)   //extra
-                {
-                    var line = reader.ReadLine();
-                    ReceiverDataList.Add(line);
-                }*/
+            try{
 
                 string data;
 
                 while ((data = Console.ReadLine()) != null)
                 {
-                    ReceiverDataList.Add(data);
+                    receiverDataList.Add(data);
+                    
                 }
-                return ReceiverDataList;
-               //return ReceiverDataList;
-
+                return receiverDataList;
+            
             }
             catch(Exception e)
             {

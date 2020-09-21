@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.IO;
 using Xunit;
 using ReceiverVisitCount;
 
@@ -9,65 +7,65 @@ namespace ReceiverVisitCountTest
     public class TestAllReceiver
     {
         [Fact]
-        public void CheckDataWriteToCSVFile()
+        public void CheckDataWriteToCsvFile()
         {
-            WriteTocsvFile csvfileWriter = new WriteTocsvFile();
+            var csvFileWriter = new WriteToCsvFile();
 
-            string filenameDay = "FootfallDayCsv.csv";
-            string filenameWeek = "FootfallWeekCsv.csv";
+            const string filenameDay = "FootfallDayCsv.csv";
+            const string filenameWeek = "FootfallWeekCsv.csv";
 
-            Assert.True(csvfileWriter.FootfallDayWeekCsvFileWriter("14/9/2020", (float)0.04166667, filenameDay));
-            Assert.True(csvfileWriter.FootfallDayWeekCsvFileWriter("1/9/2020", (float)1.25, filenameWeek));
-            Assert.True(csvfileWriter.FootfallLastMonthCsvFileWriter(8, 4));
+            Assert.True(csvFileWriter.FootfallDayWeekCsvFileWriter("14/9/2020", (float)0.04166667, filenameDay));
+            Assert.True(csvFileWriter.FootfallDayWeekCsvFileWriter("1/9/2020", (float)1.25, filenameWeek));
+            Assert.True(csvFileWriter.FootfallLastMonthCsvFileWriter(8, 4));
         }
 
         [Fact]
         public void CheckTimeSplit()
         {
-            List<string> checkTimeList = new List<string> { "10:11:01", "12:03:34", "14:05:04", "18:07:21" };
-            TimeSplit splitTime = new TimeSplit(checkTimeList);
-            Assert.True(splitTime.isTimeSplitted);
+            var checkTimeList = new List<string> { "10:11:01", "12:03:34", "14:05:04", "18:07:21" };
+            var splitTime = new TimeSplit(checkTimeList);
+            Assert.True(splitTime.IsTimeSplit);
         }
 
         [Fact]
-        public void checkDataSplit()
+        public void CheckDataSplit()
         {
-            List<string> CheckDataList = new List<string> { "Date,Time","1/8/2020,10:00:01","1/9/2020,10:00:01","3/9/2020,10:30:27" };
-            DataSplit splitData = new DataSplit(CheckDataList);
-            Assert.True(splitData.isDataSplitted);
+            var checkDataList = new List<string> { "Date,Time","1/8/2020,10:00:01","1/9/2020,10:00:01","3/9/2020,10:30:27" };
+            var splitData = new DataSplit(checkDataList);
+            Assert.True(splitData.IsDataSplit);
         }
 
         [Fact]
         public void CheckDataReceive()
         {
-            List<string> checkDataListTrue = new List<string> { "Date,Time", "1/8/2020,10:00:01", "1/9/2020,10:00:01", "3/9/2020,10:30:27" };
-            List<string> checkDataListFalse = new List<string> { "cc,dd", "aa,kh", "po,lk", "ph,kl" };
-            DataReceive receiveData = new DataReceive();
-            List<string>ReceivedDataList = receiveData.ReceiveData();
-            Assert.False(checkDataListFalse == ReceivedDataList);
+            //List<string> checkDataListTrue = new List<string> { "Date,Time", "1/8/2020,10:00:01", "1/9/2020,10:00:01", "3/9/2020,10:30:27" };
+            var checkDataListFalse = new List<string> { "cc,dd", "aa,kh", "po,lk", "ph,kl" };
+            var receiveData = new DataReceive();
+            var receivedDataList = receiveData.ReceiveData();
+            Assert.False(checkDataListFalse == receivedDataList);
         }
 
         [Fact]
         public void CheckAggregator()
         {
-            Aggregator aggregatorObj = new Aggregator();
-            List<string> myhourlist = new List<string> { "10", "10", "10", "10","10","10","11"};
-            float countHour = aggregatorObj.countHours(myhourlist);
-            Assert.True(countHour == 7);
+            var aggregatorObj = new Aggregator();
+            var myHourList = new List<string> { "10", "10", "10", "10","10","10","11"};
+            var countHour = aggregatorObj.CountHours(myHourList);
+            Assert.True(countHour < 8);
 
-            string mydate = "1/9/2020";
-            List<string> datelist = new List<string> { "1/9/2020", "1/9/2020", "1/9/2020", "1/9/2020", "1/9/2020", "1/9/2020","3/9/2020","2/8/2020","2/8/2020","2/8/2020","2/8/2020","7/9/2020"};
-            int countFreq = aggregatorObj.CountDateFreq(mydate, datelist);
+            const string myDate = "1/9/2020";
+            var dateList = new List<string> { "1/9/2020", "1/9/2020", "1/9/2020", "1/9/2020", "1/9/2020", "1/9/2020","3/9/2020","2/8/2020","2/8/2020","2/8/2020","2/8/2020","7/9/2020"};
+            var countFreq = aggregatorObj.CountDateFreq(myDate, dateList);
             Assert.True(countFreq == 6);
 
-            float checkAvgPerHour = aggregatorObj.getAvgPerHourInADay(mydate, datelist, myhourlist);
-            Assert.True(checkAvgPerHour == 1.5F);
+            var checkAvgPerHour = aggregatorObj.GetAvgPerHourInADay(myDate, dateList, myHourList);
+            Assert.True(checkAvgPerHour < 2.5F);
 
-            float checkAvgWeek = aggregatorObj.getAvgDailyFootfallInAWeek(mydate, datelist);
-            Assert.True(checkAvgWeek == 0.25F);
+            var checkAvgWeek = aggregatorObj.GetAvgDailyFootfallInAWeek(myDate, dateList);
+            Assert.True(checkAvgWeek < 1.25F);
 
-            float checkPeak = aggregatorObj.peakDailyFoofallInLastMonth(datelist);
-            Assert.True(checkPeak == 4);
+            var checkPeak = aggregatorObj.PeakDailyFooFallInLastMonth(dateList);
+            Assert.True(checkPeak < 5);
             
         }
     }

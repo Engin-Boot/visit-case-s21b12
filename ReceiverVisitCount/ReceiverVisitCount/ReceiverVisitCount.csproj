@@ -49,7 +49,7 @@
     <Compile Include="Receiver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TimeSplit.cs" />
-    <Compile Include="WriteTocsvFile.cs" />
+    <Compile Include="WriteToCsvFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

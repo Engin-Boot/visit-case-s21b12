@@ -1,145 +1,142 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ReceiverVisitCount
 {
    public class Aggregator
     {
-        public float countHours(List<string> myhourlist)
+        public float CountHours(List<string> myHourList)
         {
-            var mycounthour = 0;
-            for (int i = 0; i < myhourlist.Count; i++)
+            var myCountHour = 0;
+            for (var i = 0; i < myHourList.Count; i++)
             {
-                mycounthour = mycounthour + 1;
+                myCountHour += 1;
             }
-            return mycounthour;
+            return myCountHour;
         }
 
-        public int CountDateFreq(string mydate,List<string> datelist)
+        public int CountDateFreq(string myDate,List<string> dateList)
         {
-            int countFreq = 0;
-            for(int i=0;i<datelist.Count;i++)
+            var countFreq = 0;
+            foreach (var data in dateList)
             {
-                if (mydate == datelist[i])
+                if (myDate == data)
                     countFreq++;
             }
             return countFreq;
         }
-        public float sumOfDateCountFreq(Dictionary<string, float> dateCount)
+        public float SumOfDateCountFreq(Dictionary<string, float> dateCount)
         {
-            float AddCount = 0F;
+            var addCount = 0F;
 
-            foreach (KeyValuePair<string, float> kvp in dateCount)
+            foreach (var kvp in dateCount)
             {
-                AddCount = AddCount + kvp.Value;
+                addCount += kvp.Value;
             }
-            return AddCount;
+            return addCount;
         }
-        public  int getPeakInAMonth(Dictionary<string, int> previousMonthDates)
+        public  int GetPeakInAMonth(Dictionary<string, int> previousMonthDates)
         {
             return previousMonthDates.Keys.Select(key => previousMonthDates[key]).Prepend(0).Max();
         }
-        public List<string> GetUniqueDateList(List<string> datelist)
+        public List<string> GetUniqueDateList(List<string> dateList)
         {
-            List<string> uniqueDatelist = new List<string>();
-            for (int i = 0; i < datelist.Count; i++)
-                if (!uniqueDatelist.Contains(datelist[i]))
-                    uniqueDatelist.Add(datelist[i]);
+            var uniqueDateList = new List<string>();
+            foreach (var i in dateList)
+                if (!uniqueDateList.Contains(i))
+                    uniqueDateList.Add(i);
 
-            return uniqueDatelist;
+            return uniqueDateList;
         }
 
-        public float getAvgPerHourInADay(string date, List<string> datelist, List<string> hourlist)
+        public float GetAvgPerHourInADay(string date, List<string> dateList, List<string> hourList)
         {
-            List<string> myhourlist = new List<string>();
+            var myHourList = new List<string>();
 
-            for (int i = 0; i < hourlist.Count; i++)
+            for (var i = 0; i < hourList.Count; i++)
             {
-                if (date == datelist[i])
-                    myhourlist.Add(hourlist[i]);
+                if (date == dateList[i])
+                    myHourList.Add(hourList[i]);
             }
 
-            var mycounthour = countHours(myhourlist);
-            var hourAvgResult = mycounthour / 4;
+            var myCountHour = CountHours(myHourList);
+            var hourAvgResult = myCountHour / 4;
             Console.WriteLine(hourAvgResult);
 
-            WriteTocsvFile csvWriter = new WriteTocsvFile();
-            string filename = "FootfallDayCsv.csv";
+            var csvWriter = new WriteToCsvFile();
+            const string filename = "FootfallDayCsv.csv";
             csvWriter.FootfallDayWeekCsvFileWriter(date, hourAvgResult,filename);
 
             return hourAvgResult;
         }
-        public float getAvgDailyFootfallInAWeek(string date,List<string> datelist)
+        public float GetAvgDailyFootfallInAWeek(string date,List<string> dateList)
         {
 
-            Dictionary<string, float> dateCount = new Dictionary<string, float>();
+            var dateCount = new Dictionary<string, float>();
 
-            string format = "d/M/yyyy";
-            DateTime convertedDate = DateTime.ParseExact(date, format, null);
+           const string format = "d/M/yyyy";
+           var convertedDate = DateTime.ParseExact(date, format, null);
             
-            int year = convertedDate.Year;
-            int month = convertedDate.Month;
-            int startDate = convertedDate.Day;
-            
+            var year = convertedDate.Year;
+            var month = convertedDate.Month;
 
-            int daysInMonth = DateTime.DaysInMonth(year, month);
 
-            for(int i = 0; i < daysInMonth; i++)
+            var daysInMonth = DateTime.DaysInMonth(year, month);
+
+            for(var i = 0; i < daysInMonth; i++)
             {
-                DateTime nextDate = convertedDate.AddDays(i);
-                int day = (int) nextDate.DayOfWeek;
+                var nextDate = convertedDate.AddDays(i);
+                var day = (int) nextDate.DayOfWeek;
 
                 if(day == 1)
                 {
-                    string mydate = nextDate.ToString("d/M/yyyy");
+                    var myDate = nextDate.ToString("d/M/yyyy");
 
-                    var countfreq = CountDateFreq(mydate, datelist);
-                    dateCount.Add(mydate, countfreq);
+                    var countFreq = CountDateFreq(myDate, dateList);
+                    dateCount.Add(myDate, countFreq);
                 }
             }
-            var AddCountAvg = sumOfDateCountFreq(dateCount);
+            var addCountAvg = SumOfDateCountFreq(dateCount);
 
-            var DailyAvgInAWeek = AddCountAvg / dateCount.Count;
-            Console.WriteLine(DailyAvgInAWeek);
+            var dailyAvgInAWeek = addCountAvg / dateCount.Count;
+            Console.WriteLine(dailyAvgInAWeek);
 
-            WriteTocsvFile csvWriter = new WriteTocsvFile();
-            string filename = "FootfallWeekCsv.csv";
-            csvWriter.FootfallDayWeekCsvFileWriter(date, DailyAvgInAWeek, filename);
-            return DailyAvgInAWeek;
+            var csvWriter = new WriteToCsvFile();
+            const string filename = "FootfallWeekCsv.csv";
+            csvWriter.FootfallDayWeekCsvFileWriter(date, dailyAvgInAWeek, filename);
+            return dailyAvgInAWeek;
         }
 
-        public int peakDailyFoofallInLastMonth(List<string> datelist)
+        public int PeakDailyFooFallInLastMonth(List<string> dateList)
         {
             var date = DateTime.Now;
-            int previousMonth = Convert.ToInt32(date.AddMonths(-1).Month.ToString());
-            Dictionary<string, int> previousMonthDates = new Dictionary<string, int>();
+            var previousMonth = Convert.ToInt32(date.AddMonths(-1).Month.ToString());
+            var previousMonthDates = new Dictionary<string, int>();
 
-            List<string> uniqueDatelist = GetUniqueDateList(datelist);
+            var uniqueDateList = GetUniqueDateList(dateList);
 
-            for(int i=0; i< uniqueDatelist.Count; i++)
+            foreach(var i in uniqueDateList)
             {
-                string format = "d/M/yyyy";
-                DateTime convertedDate = DateTime.ParseExact(uniqueDatelist[i], format, null);
+                const string format = "d/M/yyyy";
+                var convertedDate = DateTime.ParseExact(i, format, null);
                 
 
-                int convertedDateMonth = convertedDate.Month;
+                var convertedDateMonth = convertedDate.Month;
                 if(convertedDateMonth == previousMonth)
                 {
-                    string mydate = convertedDate.ToString("d/M/yyyy");
+                    var myDate = convertedDate.ToString("d/M/yyyy");
 
-                    var countfreq = CountDateFreq(mydate, datelist);
-                    previousMonthDates.Add(mydate, countfreq);
+                    var countFreq = CountDateFreq(myDate, dateList);
+                    previousMonthDates.Add(myDate, countFreq);
                 }
             }
 
-            var peak = getPeakInAMonth(previousMonthDates);
+            var peak = GetPeakInAMonth(previousMonthDates);
             Console.WriteLine(peak);
 
-            WriteTocsvFile csvWriter = new WriteTocsvFile();
+            var csvWriter = new WriteToCsvFile();
             csvWriter.FootfallLastMonthCsvFileWriter(previousMonth, peak);
             return peak;
           

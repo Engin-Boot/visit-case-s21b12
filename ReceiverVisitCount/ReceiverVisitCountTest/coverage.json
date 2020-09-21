@@ -280,7 +280,7 @@
             }
           ]
         },
-        "System.Int32 ReceiverVisitCount.Aggregator::peakDailyFoofallInLastMonth(System.Collections.Generic.List`1<System.String>)": {
+        "System.Int32 ReceiverVisitCount.Aggregator::peakDailyFooFallInLastMonth(System.Collections.Generic.List`1<System.String>)": {
           "Lines": {
             "116": 1,
             "117": 1,
@@ -398,7 +398,7 @@
           },
           "Branches": []
         },
-        "System.Boolean ReceiverVisitCount.DataSplit::get_isDataSplitted()": {
+        "System.Boolean ReceiverVisitCount.DataSplit::get_isDataSplit()": {
           "Lines": {
             "14": 3
           },
@@ -541,7 +541,7 @@
           },
           "Branches": []
         },
-        "System.Boolean ReceiverVisitCount.TimeSplit::get_isTimeSplitted()": {
+        "System.Boolean ReceiverVisitCount.TimeSplit::get_isTimeSplit()": {
           "Lines": {
             "15": 3
           },
@@ -616,9 +616,9 @@
         }
       }
     },
-    "C:\\Users\\deeks\\OneDrive\\Desktop\\Receiver\\ReceiverVisitCount\\ReceiverVisitCount\\WriteTocsvFile.cs": {
-      "ReceiverVisitCount.WriteTocsvFile": {
-        "System.Boolean ReceiverVisitCount.WriteTocsvFile::FootfallDayWeekCsvFileWriter(System.String,System.Single,System.String)": {
+    "C:\\Users\\deeks\\OneDrive\\Desktop\\Receiver\\ReceiverVisitCount\\ReceiverVisitCount\\WriteToCsvFile.cs": {
+      "ReceiverVisitCount.WriteToCsvFile": {
+        "System.Boolean ReceiverVisitCount.WriteToCsvFile::FootfallDayWeekCsvFileWriter(System.String,System.Single,System.String)": {
           "Lines": {
             "14": 4,
             "16": 4,
@@ -670,7 +670,7 @@
             }
           ]
         },
-        "System.Boolean ReceiverVisitCount.WriteTocsvFile::FootfallLastMonthCsvFileWriter(System.Int32,System.Int32)": {
+        "System.Boolean ReceiverVisitCount.WriteToCsvFile::FootfallLastMonthCsvFileWriter(System.Int32,System.Int32)": {
           "Lines": {
             "54": 2,
             "56": 2,

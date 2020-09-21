@@ -1,38 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Dynamic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ReceiverVisitCount
 {
    public class TimeSplit
     {
-        public List<string> hourList { get; set; }
-        public List<string> minuteList { get; set; }
-        public List<string> secondList { get; set; }
-        public bool isTimeSplitted { get; set; }
+        public List<string> HourList { get; set; }
+        public List<string> MinuteList { get; set; }
+        public List<string> SecondList { get; set; }
+        public bool IsTimeSplit { get; set; }
 
         public TimeSplit(List<string> timeList)
         {
-            isTimeSplitted = false;
-            this.hourList = new List<string>();
-            this.minuteList = new List<string>();
-            this.secondList = new List<string>();
-            this.TimeSplitIntoHourMinuteSecond(timeList);
-            isTimeSplitted = true;
+            IsTimeSplit = false;
+            HourList = new List<string>();
+            MinuteList = new List<string>();
+            SecondList = new List<string>();
+            TimeSplitIntoHourMinuteSecond(timeList);
+            IsTimeSplit = true;
         }
-        public bool TimeSplitIntoHourMinuteSecond(List<string> timelist)
+        public bool TimeSplitIntoHourMinuteSecond(List<string> timeList)
         {
             try
             {
-                for (int i = 0; i < timelist.Count; i++)
+                foreach (var i in timeList)
                 {
-                    string[] date = timelist[i].Split(':');
-                    hourList.Add(date[0]);
-                    minuteList.Add(date[1]);
-                    secondList.Add(date[2]);
+                    var date = i.Split(':');
+                    HourList.Add(date[0]);
+                    MinuteList.Add(date[1]);
+                    SecondList.Add(date[2]);
                 }
                 return true;
             }

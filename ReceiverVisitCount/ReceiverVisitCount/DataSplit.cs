@@ -1,36 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ReceiverVisitCount
 {
     public class DataSplit
     {
-        public List<string> dateList { get; set; }
-        public List<string> timeList { get; set; }
+        public List<string> DateList { get; set; }
+        public List<string> TimeList { get; set; }
 
-        public bool isDataSplitted { get; set; }
+        public bool IsDataSplit { get; set; }
 
-        public DataSplit(List<string> ReceieveDataList)
+        public DataSplit(List<string> receiveDataList)
         {
-            isDataSplitted = false;
-            this.dateList = new List<string>();
-            this.timeList = new List<string>();
-            this.SplitDataIntoDateAndTime(ReceieveDataList);
-            isDataSplitted = true;
+            IsDataSplit = false;
+            DateList = new List<string>();
+            TimeList = new List<string>();
+            SplitDataIntoDateAndTime(receiveDataList);
+            IsDataSplit = true;
         }
-        public void SplitDataIntoDateAndTime(List<string> ReceieveDataList)
+
+        public void SplitDataIntoDateAndTime(List<string> receiveDataList)
         {
-            try
+            try 
             {
-                for (int i = 1; i < ReceieveDataList.Count; i++)
+                for (var i = 1; i < receiveDataList.Count-1; i++)
                 {
-                    string[] dateTime = ReceieveDataList[i].Split(',');
-                    dateList.Add(dateTime[0]);
-                    timeList.Add(dateTime[1]);
+
+                  var dateTime = receiveDataList[i].Split(',');
+
+                  DateList.Add(dateTime[0]);
+                  TimeList.Add(dateTime[1]);
+
                 }
+
             }
             catch (Exception e)
             {
@@ -40,3 +43,4 @@ namespace ReceiverVisitCount
         }
     }
 }
+

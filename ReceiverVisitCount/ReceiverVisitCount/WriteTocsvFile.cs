@@ -1,44 +1,43 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Runtime.Remoting.Metadata.W3cXsd2001;
+
 
 namespace ReceiverVisitCount
 {
-    public class WriteTocsvFile
+    public class WriteToCsvFile
     {
         public bool FootfallDayWeekCsvFileWriter(string date, float aggregateData,string filename)
         {
             try
             {
-                string csvOutputFilePath = Directory.GetCurrentDirectory();
-                string csvFileName = filename;
+                var csvOutputFilePath = Directory.GetCurrentDirectory();
+                var csvFileName = filename;
                 csvOutputFilePath += @"\" + csvFileName;
 
-                string format = "d/M/yyyy";
-                DateTime convertedDate = DateTime.ParseExact(date, format, null);
+                const string format = "d/M/yyyy";
+                var convertedDate = DateTime.ParseExact(date, format, null);
 
-                int year = convertedDate.Year;
-                int month = convertedDate.Month;
-                int dateDay = convertedDate.Day;
+                var year = convertedDate.Year;
+                var month = convertedDate.Month;
+                var dateDay = convertedDate.Day;
 
                 var csv = new StringBuilder();
-                var dayHeader = "Day";
-                var monthHeader = "Month";
-                var yearHeader = "Year";
-                var valueHeader = "Aggregated Value";
+                const string dayHeader = "Day";
+                const string monthHeader = "Month";
+                const string yearHeader = "Year";
+                const string valueHeader = "Aggregated Value";
                 var myDay = dateDay.ToString();
                 var myMonth = month.ToString();
                 var myYear = year.ToString();
-                var myValue = aggregateData.ToString();
+                var invC = CultureInfo.InvariantCulture;
+                var myValue = aggregateData.ToString(invC);
 
 
-                var headerLine = string.Format("{0},{1},{2},{3}\n", dayHeader, monthHeader, yearHeader, valueHeader, Environment.NewLine);
+                var headerLine = string.Format("{0},{1},{2},{3}\n", dayHeader, monthHeader, yearHeader, valueHeader);
                 csv.Append(headerLine);
-                var dataLine = string.Format("{0},{1},{2},{3}", myDay, myMonth, myYear, myValue, Environment.NewLine);
+                var dataLine = string.Format("{0},{1},{2},{3}", myDay, myMonth, myYear, myValue);
                 csv.Append(dataLine);
 
                 File.WriteAllText(csvOutputFilePath, csv.ToString());
@@ -54,20 +53,20 @@ namespace ReceiverVisitCount
         {
             try
             {
-                string csvOutputFilePath = Directory.GetCurrentDirectory();
-                string csvFileName = "FootfallLastMonthCsv.csv";
+                var csvOutputFilePath = Directory.GetCurrentDirectory();
+                const string csvFileName = "FootfallLastMonthCsv.csv";
                 csvOutputFilePath += @"\" + csvFileName;
 
                 var csv = new StringBuilder();
 
-                var monthHeader = "Month";
-                var valueHeader = "Peak Value";
+                const string monthHeader = "Month";
+                const string valueHeader = "Peak Value";
                 var myMonth = month.ToString();
                 var myValue = peakValue.ToString();
 
-                var headerLine = string.Format("{0},{1}\n", monthHeader, valueHeader, Environment.NewLine);
+                var headerLine = string.Format("{0},{1}\n", monthHeader, valueHeader);
                 csv.Append(headerLine);
-                var dataLine = string.Format("{0},{1}", myMonth, myValue, Environment.NewLine);
+                var dataLine = string.Format("{0},{1}", myMonth, myValue);
                 csv.Append(dataLine);
 
                 File.WriteAllText(csvOutputFilePath, csv.ToString());
