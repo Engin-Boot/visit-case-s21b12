@@ -8,16 +8,16 @@ on:
 
 
 jobs:
-
+  
   build:
 
     strategy:
       matrix:
         configuration: [Debug]
-
+    job1:
     runs-on: windows-latest  # For a list of available runner types, refer to
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
-
+  
     env:
       Solution_Name: SenderVisitCount.sln
       Test_Project_Path: SenderVisitCount\SenderVisitCount.Test\SenderVisitCount.Test.csproj    # Replace with the path to your test project, i.e. MyWpfApp.Tests\MyWpfApp.Tests.csproj.
@@ -35,4 +35,27 @@ jobs:
         dotnet-version: 3.1.101
 
     - name: Run tests
+      run: dotnet test
+      
+    job2:
+    runs-on: windows-latest  # For a list of available runner types, refer to
+                             # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
+  
+    env:
+      Solution_Name: ReceiverVisitCount.sln
+      Test_Project_Path: ReceiverVisitCount\ReceiverVisitCountTest\ReceiverVisitCountTest.csproj    # Replace with the path to your test project, i.e. MyWpfApp.Tests\MyWpfApp.Tests.csproj.
+
+    steps:
+    - name: Checkout V2
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    # Install the .NET Core workload
+    - name: Install .NET Core V2
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 4.7.2
+
+    - name: Run tests V2
       run: dotnet test
