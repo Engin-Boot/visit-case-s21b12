@@ -26,6 +26,3 @@ jobs:
        
       - name: Check Reports
         run: powershell ./resharper.ps1
-        
-      - name: Run tests
-        run: dotnet test  
