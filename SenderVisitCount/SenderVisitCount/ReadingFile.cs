@@ -14,12 +14,12 @@ namespace SenderVisitCount
 
             try
             {
-                StreamReader fileDataStreamReader = new StreamReader(csvFilePath);
+                var fileDataStreamReader = new StreamReader(csvFilePath);
                 var data = fileDataStreamReader.ReadToEnd();
                 fileDataStreamReader.Close();
                 return data;
             }
-            catch (Exception e)
+            catch (Exception )
             {
 
                 throw new FileNotFoundException("The required file not found");

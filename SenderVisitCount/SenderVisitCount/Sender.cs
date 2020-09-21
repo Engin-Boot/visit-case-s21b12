@@ -2,12 +2,12 @@
 
 namespace SenderVisitCount
 {
-    class Sender
+    public class Sender
     {
         public static void Main()
         {
             
-            string csvData = new ReadingFile().ReadCsv();
+            var csvData = new ReadingFile().ReadCsv();
             Console.WriteLine(csvData);
         }
     }

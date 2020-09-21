@@ -5,7 +5,7 @@ namespace SenderVisitCount.Test
 {
     public class SenderUnitTest
     {
-        private string ReturnCsvPath(string file)
+        private static string  ReturnCsvPath(string file)
         {
             var path = Directory.GetCurrentDirectory();
             path += @"\" + file;
