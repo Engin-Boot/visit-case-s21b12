@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -27,7 +27,7 @@ namespace ReceiverVisitCount
             }
             return countFreq;
         }
-        public float SumOfDateCountFreq(Dictionary<string, float> dateCount)
+        private float SumOfDateCountFreq(Dictionary<string, float> dateCount)
         {
             var addCount = 0F;
 
@@ -37,11 +37,11 @@ namespace ReceiverVisitCount
             }
             return addCount;
         }
-        public  int GetPeakInAMonth(Dictionary<string, int> previousMonthDates)
+        private int GetPeakInAMonth(Dictionary<string, int> previousMonthDates)
         {
             return previousMonthDates.Keys.Select(key => previousMonthDates[key]).Prepend(0).Max();
         }
-        public List<string> GetUniqueDateList(List<string> dateList)
+        private List<string> GetUniqueDateList(List<string> dateList)
         {
             var uniqueDateList = new List<string>();
             foreach (var i in dateList)
@@ -143,4 +143,3 @@ namespace ReceiverVisitCount
         }
      }
  }
-
