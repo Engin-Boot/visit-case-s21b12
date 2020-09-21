@@ -2,20 +2,20 @@
   "ReceiverVisitCount.exe": {
     "C:\\Users\\deeks\\OneDrive\\Desktop\\Receiver\\ReceiverVisitCount\\ReceiverVisitCount\\Aggregator.cs": {
       "ReceiverVisitCount.Aggregator": {
-        "System.Single ReceiverVisitCount.Aggregator::countHours(System.Collections.Generic.List`1<System.String>)": {
+        "System.Single ReceiverVisitCount.Aggregator::CountHours(System.Collections.Generic.List`1<System.String>)": {
           "Lines": {
-            "13": 2,
-            "14": 2,
-            "15": 30,
+            "11": 2,
+            "12": 2,
+            "13": 30,
+            "14": 13,
+            "15": 13,
             "16": 13,
-            "17": 13,
-            "18": 13,
-            "19": 2,
-            "20": 2
+            "17": 2,
+            "18": 2
           },
           "Branches": [
             {
-              "Line": 15,
+              "Line": 13,
               "Offset": 28,
               "EndOffset": 7,
               "Path": 1,
@@ -23,7 +23,7 @@
               "Hits": 13
             },
             {
-              "Line": 15,
+              "Line": 13,
               "Offset": 28,
               "EndOffset": 30,
               "Path": 0,
@@ -34,43 +34,43 @@
         },
         "System.Int32 ReceiverVisitCount.Aggregator::CountDateFreq(System.String,System.Collections.Generic.List`1<System.String>)": {
           "Lines": {
-            "23": 6,
-            "24": 6,
-            "25": 156,
-            "26": 72,
+            "21": 6,
+            "22": 6,
+            "23": 162,
+            "24": 72,
+            "25": 72,
+            "26": 11,
             "27": 72,
-            "28": 11,
-            "29": 72,
-            "30": 6,
-            "31": 6
+            "28": 6,
+            "29": 6
           },
           "Branches": [
             {
-              "Line": 25,
+              "Line": 23,
               "Offset": 45,
-              "EndOffset": 7,
+              "EndOffset": 13,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 72
             },
             {
-              "Line": 27,
-              "Offset": 23,
-              "EndOffset": 25,
+              "Line": 25,
+              "Offset": 31,
+              "EndOffset": 33,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 11
             },
             {
-              "Line": 27,
-              "Offset": 23,
-              "EndOffset": 29,
+              "Line": 25,
+              "Offset": 31,
+              "EndOffset": 37,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 72
             },
             {
-              "Line": 25,
+              "Line": 23,
               "Offset": 45,
               "EndOffset": 47,
               "Path": 0,
@@ -79,20 +79,20 @@
             }
           ]
         },
-        "System.Single ReceiverVisitCount.Aggregator::sumOfDateCountFreq(System.Collections.Generic.Dictionary`2<System.String,System.Single>)": {
+        "System.Single ReceiverVisitCount.Aggregator::SumOfDateCountFreq(System.Collections.Generic.Dictionary`2<System.String,System.Single>)": {
           "Lines": {
-            "33": 1,
-            "34": 1,
-            "36": 11,
+            "31": 1,
+            "32": 1,
+            "34": 11,
+            "35": 4,
+            "36": 4,
             "37": 4,
-            "38": 4,
-            "39": 4,
-            "40": 1,
-            "41": 1
+            "38": 1,
+            "39": 1
           },
           "Branches": [
             {
-              "Line": 36,
+              "Line": 34,
               "Offset": 44,
               "EndOffset": 17,
               "Path": 1,
@@ -100,7 +100,7 @@
               "Hits": 4
             },
             {
-              "Line": 36,
+              "Line": 34,
               "Offset": 44,
               "EndOffset": 46,
               "Path": 0,
@@ -109,80 +109,79 @@
             }
           ]
         },
-        "System.Int32 ReceiverVisitCount.Aggregator::getPeakInAMonth(System.Collections.Generic.Dictionary`2<System.String,System.Int32>)": {
+        "System.Int32 ReceiverVisitCount.Aggregator::GetPeakInAMonth(System.Collections.Generic.Dictionary`2<System.String,System.Int32>)": {
           "Lines": {
-            "43": 1,
-            "44": 2,
-            "45": 1
+            "41": 1,
+            "42": 2,
+            "43": 1
           },
           "Branches": []
         },
         "System.Collections.Generic.List`1<System.String> ReceiverVisitCount.Aggregator::GetUniqueDateList(System.Collections.Generic.List`1<System.String>)": {
           "Lines": {
-            "47": 1,
-            "48": 1,
-            "49": 26,
-            "50": 12,
-            "51": 4,
-            "53": 1,
-            "54": 1
+            "45": 1,
+            "46": 1,
+            "47": 27,
+            "48": 12,
+            "49": 4,
+            "51": 1,
+            "52": 1
           },
           "Branches": [
             {
-              "Line": 49,
-              "Offset": 60,
-              "EndOffset": 11,
+              "Line": 47,
+              "Offset": 54,
+              "EndOffset": 17,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 12
             },
             {
-              "Line": 50,
-              "Offset": 29,
-              "EndOffset": 31,
+              "Line": 48,
+              "Offset": 37,
+              "EndOffset": 39,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 4
             },
             {
-              "Line": 50,
-              "Offset": 29,
-              "EndOffset": 45,
+              "Line": 48,
+              "Offset": 37,
+              "EndOffset": 47,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 12
+              "Hits": 13
             },
             {
-              "Line": 49,
-              "Offset": 60,
-              "EndOffset": 62,
+              "Line": 47,
+              "Offset": 54,
+              "EndOffset": 56,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 1
             }
           ]
         },
-        "System.Single ReceiverVisitCount.Aggregator::getAvgPerHourInADay(System.String,System.Collections.Generic.List`1<System.String>,System.Collections.Generic.List`1<System.String>)": {
+        "System.Single ReceiverVisitCount.Aggregator::GetAvgPerHourInADay(System.String,System.Collections.Generic.List`1<System.String>,System.Collections.Generic.List`1<System.String>)": {
           "Lines": {
-            "57": 1,
-            "58": 1,
-            "60": 16,
-            "61": 7,
+            "55": 1,
+            "56": 1,
+            "58": 16,
+            "59": 7,
+            "60": 7,
+            "61": 6,
             "62": 7,
-            "63": 6,
-            "64": 7,
+            "64": 1,
+            "65": 1,
             "66": 1,
-            "67": 1,
             "68": 1,
             "70": 1,
-            "71": 1,
             "72": 1,
-            "74": 1,
-            "75": 1
+            "73": 1
           },
           "Branches": [
             {
-              "Line": 60,
+              "Line": 58,
               "Offset": 69,
               "EndOffset": 12,
               "Path": 1,
@@ -190,7 +189,7 @@
               "Hits": 7
             },
             {
-              "Line": 62,
+              "Line": 60,
               "Offset": 31,
               "EndOffset": 33,
               "Path": 0,
@@ -198,7 +197,7 @@
               "Hits": 6
             },
             {
-              "Line": 62,
+              "Line": 60,
               "Offset": 31,
               "EndOffset": 48,
               "Path": 1,
@@ -206,7 +205,7 @@
               "Hits": 7
             },
             {
-              "Line": 60,
+              "Line": 58,
               "Offset": 69,
               "EndOffset": 71,
               "Path": 0,
@@ -215,126 +214,122 @@
             }
           ]
         },
-        "System.Single ReceiverVisitCount.Aggregator::getAvgDailyFootfallInAWeek(System.String,System.Collections.Generic.List`1<System.String>)": {
+        "System.Single ReceiverVisitCount.Aggregator::GetAvgDailyFootfallInAWeek(System.String,System.Collections.Generic.List`1<System.String>)": {
           "Lines": {
+            "75": 1,
             "77": 1,
-            "79": 1,
-            "81": 1,
+            "80": 1,
             "82": 1,
-            "84": 1,
-            "85": 1,
+            "83": 1,
             "86": 1,
-            "89": 1,
-            "91": 62,
-            "92": 30,
+            "88": 62,
+            "89": 30,
+            "90": 30,
+            "91": 30,
             "93": 30,
-            "94": 30,
-            "96": 30,
+            "94": 4,
+            "95": 4,
             "97": 4,
             "98": 4,
-            "100": 4,
-            "101": 4,
-            "102": 4,
-            "103": 30,
+            "99": 4,
+            "100": 30,
+            "101": 1,
+            "103": 1,
             "104": 1,
             "106": 1,
-            "107": 1,
+            "108": 1,
             "109": 1,
-            "110": 1,
-            "111": 1,
-            "112": 1,
-            "113": 1
+            "110": 1
           },
           "Branches": [
             {
-              "Line": 91,
-              "Offset": 152,
-              "EndOffset": 63,
+              "Line": 88,
+              "Offset": 139,
+              "EndOffset": 50,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 30
             },
             {
-              "Line": 96,
-              "Offset": 94,
-              "EndOffset": 96,
+              "Line": 93,
+              "Offset": 81,
+              "EndOffset": 83,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 4
             },
             {
-              "Line": 96,
-              "Offset": 94,
-              "EndOffset": 135,
+              "Line": 93,
+              "Offset": 81,
+              "EndOffset": 122,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 30
             },
             {
-              "Line": 91,
-              "Offset": 152,
-              "EndOffset": 154,
+              "Line": 88,
+              "Offset": 139,
+              "EndOffset": 141,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 1
             }
           ]
         },
-        "System.Int32 ReceiverVisitCount.Aggregator::peakDailyFooFallInLastMonth(System.Collections.Generic.List`1<System.String>)": {
+        "System.Int32 ReceiverVisitCount.Aggregator::PeakDailyFooFallInLastMonth(System.Collections.Generic.List`1<System.String>)": {
           "Lines": {
+            "113": 1,
+            "114": 1,
+            "115": 1,
             "116": 1,
-            "117": 1,
             "118": 1,
-            "119": 1,
-            "121": 1,
-            "123": 10,
-            "124": 4,
-            "125": 4,
+            "120": 11,
+            "121": 4,
+            "123": 4,
             "126": 4,
-            "129": 4,
-            "130": 4,
+            "127": 4,
+            "128": 1,
+            "129": 1,
             "131": 1,
             "132": 1,
-            "134": 1,
-            "135": 1,
+            "133": 1,
+            "134": 4,
             "136": 1,
-            "137": 4,
+            "137": 1,
             "139": 1,
             "140": 1,
-            "142": 1,
-            "143": 1,
-            "144": 1,
-            "146": 1
+            "141": 1,
+            "143": 1
           },
           "Branches": [
             {
-              "Line": 123,
-              "Offset": 163,
-              "EndOffset": 58,
+              "Line": 120,
+              "Offset": 155,
+              "EndOffset": 64,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 4
             },
             {
-              "Line": 130,
-              "Offset": 102,
-              "EndOffset": 104,
+              "Line": 127,
+              "Offset": 107,
+              "EndOffset": 109,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 1
             },
             {
-              "Line": 130,
-              "Offset": 102,
-              "EndOffset": 142,
+              "Line": 127,
+              "Offset": 107,
+              "EndOffset": 147,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 4
             },
             {
-              "Line": 123,
-              "Offset": 163,
-              "EndOffset": 165,
+              "Line": 120,
+              "Offset": 155,
+              "EndOffset": 157,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 1
@@ -347,38 +342,36 @@
       "ReceiverVisitCount.DataReceive": {
         "System.Collections.Generic.List`1<System.String> ReceiverVisitCount.DataReceive::ReceiveData()": {
           "Lines": {
-            "14": 1,
-            "15": 1,
-            "17": 1,
-            "20": 1,
-            "21": 85,
-            "22": 84,
-            "23": 84,
-            "24": 84,
-            "25": 84,
-            "34": 1,
-            "37": 0,
-            "38": 0,
-            "39": 0,
-            "40": 0,
-            "42": 1
+            "10": 0,
+            "11": 0,
+            "13": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "30": 0
           },
           "Branches": [
             {
-              "Line": 21,
-              "Offset": 54,
-              "EndOffset": 26,
+              "Line": 17,
+              "Offset": 32,
+              "EndOffset": 10,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 84
+              "Hits": 0
             },
             {
-              "Line": 21,
-              "Offset": 54,
-              "EndOffset": 56,
+              "Line": 17,
+              "Offset": 32,
+              "EndOffset": 34,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 1
+              "Hits": 0
             }
           ]
         }
@@ -386,70 +379,70 @@
     },
     "C:\\Users\\deeks\\OneDrive\\Desktop\\Receiver\\ReceiverVisitCount\\ReceiverVisitCount\\DataSplit.cs": {
       "ReceiverVisitCount.DataSplit": {
-        "System.Collections.Generic.List`1<System.String> ReceiverVisitCount.DataSplit::get_dateList()": {
+        "System.Collections.Generic.List`1<System.String> ReceiverVisitCount.DataSplit::get_DateList()": {
           "Lines": {
-            "11": 4
+            "9": 2
           },
           "Branches": []
         },
-        "System.Collections.Generic.List`1<System.String> ReceiverVisitCount.DataSplit::get_timeList()": {
+        "System.Collections.Generic.List`1<System.String> ReceiverVisitCount.DataSplit::get_TimeList()": {
           "Lines": {
-            "12": 4
+            "10": 2
           },
           "Branches": []
         },
-        "System.Boolean ReceiverVisitCount.DataSplit::get_isDataSplit()": {
+        "System.Boolean ReceiverVisitCount.DataSplit::get_IsDataSplit()": {
           "Lines": {
-            "14": 3
+            "12": 1
           },
           "Branches": []
         },
         "System.Void ReceiverVisitCount.DataSplit::SplitDataIntoDateAndTime(System.Collections.Generic.List`1<System.String>)": {
           "Lines": {
-            "25": 1,
-            "27": 1,
-            "28": 8,
-            "29": 3,
-            "30": 3,
-            "31": 3,
-            "32": 3,
-            "33": 3,
-            "34": 1,
-            "35": 0,
-            "36": 0,
-            "37": 0,
+            "24": 1,
+            "26": 1,
+            "27": 6,
+            "28": 2,
+            "30": 2,
+            "32": 2,
+            "33": 2,
+            "35": 2,
+            "37": 1,
             "38": 0,
-            "40": 1
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "43": 1
           },
           "Branches": [
             {
-              "Line": 28,
-              "Offset": 77,
+              "Line": 27,
+              "Offset": 79,
               "EndOffset": 6,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 3
+              "Hits": 2
             },
             {
-              "Line": 28,
-              "Offset": 77,
-              "EndOffset": 79,
+              "Line": 27,
+              "Offset": 79,
+              "EndOffset": 81,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 1
             },
             {
-              "Line": 37,
-              "Offset": 86,
-              "EndOffset": 88,
+              "Line": 40,
+              "Offset": 88,
+              "EndOffset": 90,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 0
             },
             {
-              "Line": 37,
-              "Offset": 86,
-              "EndOffset": 92,
+              "Line": 40,
+              "Offset": 88,
+              "EndOffset": 94,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 0
@@ -458,14 +451,14 @@
         },
         "System.Void ReceiverVisitCount.DataSplit::.ctor(System.Collections.Generic.List`1<System.String>)": {
           "Lines": {
+            "14": 1,
+            "15": 1,
             "16": 1,
             "17": 1,
             "18": 1,
             "19": 1,
             "20": 1,
-            "21": 1,
-            "22": 1,
-            "23": 1
+            "21": 1
           },
           "Branches": []
         }
@@ -473,46 +466,41 @@
     },
     "C:\\Users\\deeks\\OneDrive\\Desktop\\Receiver\\ReceiverVisitCount\\ReceiverVisitCount\\Receiver.cs": {
       "ReceiverVisitCount.Receiver": {
-        "System.Void ReceiverVisitCount.Receiver::Main(System.String[])": {
+        "System.Void ReceiverVisitCount.Receiver::Main()": {
           "Lines": {
+            "8": 0,
+            "10": 0,
             "12": 0,
             "14": 0,
             "16": 0,
             "17": 0,
-            "19": 0,
+            "18": 0,
+            "20": 0,
             "21": 0,
-            "22": 0,
-            "23": 0,
-            "25": 0,
-            "26": 0,
+            "24": 0,
             "27": 0,
-            "28": 0,
             "30": 0,
             "32": 0,
             "33": 0,
+            "34": 0,
             "35": 0,
             "36": 0,
-            "38": 0,
-            "39": 0,
-            "40": 0,
-            "41": 0,
-            "42": 0,
-            "43": 0,
-            "44": 0
+            "37": 0,
+            "38": 0
           },
           "Branches": [
             {
-              "Line": 42,
-              "Offset": 145,
-              "EndOffset": 147,
+              "Line": 36,
+              "Offset": 110,
+              "EndOffset": 112,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 0
             },
             {
-              "Line": 42,
-              "Offset": 145,
-              "EndOffset": 151,
+              "Line": 36,
+              "Offset": 110,
+              "EndOffset": 116,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
@@ -523,77 +511,63 @@
     },
     "C:\\Users\\deeks\\OneDrive\\Desktop\\Receiver\\ReceiverVisitCount\\ReceiverVisitCount\\TimeSplit.cs": {
       "ReceiverVisitCount.TimeSplit": {
-        "System.Collections.Generic.List`1<System.String> ReceiverVisitCount.TimeSplit::get_hourList()": {
+        "System.Collections.Generic.List`1<System.String> ReceiverVisitCount.TimeSplit::get_HourList()": {
           "Lines": {
-            "12": 5
+            "9": 4
           },
           "Branches": []
         },
-        "System.Collections.Generic.List`1<System.String> ReceiverVisitCount.TimeSplit::get_minuteList()": {
+        "System.Boolean ReceiverVisitCount.TimeSplit::get_IsTimeSplit()": {
           "Lines": {
-            "13": 5
+            "10": 1
           },
           "Branches": []
         },
-        "System.Collections.Generic.List`1<System.String> ReceiverVisitCount.TimeSplit::get_secondList()": {
+        "System.Void ReceiverVisitCount.TimeSplit::TimeSplitIntoHourMinuteSecond(System.Collections.Generic.List`1<System.String>)": {
           "Lines": {
-            "14": 5
-          },
-          "Branches": []
-        },
-        "System.Boolean ReceiverVisitCount.TimeSplit::get_isTimeSplit()": {
-          "Lines": {
-            "15": 3
-          },
-          "Branches": []
-        },
-        "System.Boolean ReceiverVisitCount.TimeSplit::TimeSplitIntoHourMinuteSecond(System.Collections.Generic.List`1<System.String>)": {
-          "Lines": {
-            "27": 1,
-            "29": 1,
-            "30": 10,
-            "31": 4,
-            "32": 4,
-            "33": 4,
-            "34": 4,
-            "35": 4,
-            "36": 4,
-            "37": 1,
-            "39": 0,
-            "40": 0,
-            "41": 0,
-            "42": 0,
-            "44": 1
+            "20": 1,
+            "22": 1,
+            "23": 11,
+            "24": 4,
+            "25": 4,
+            "26": 4,
+            "27": 4,
+            "28": 1,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "34": 1
           },
           "Branches": [
             {
-              "Line": 30,
-              "Offset": 92,
-              "EndOffset": 6,
+              "Line": 23,
+              "Offset": 62,
+              "EndOffset": 12,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 4
             },
             {
-              "Line": 30,
-              "Offset": 92,
-              "EndOffset": 94,
+              "Line": 23,
+              "Offset": 62,
+              "EndOffset": 64,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 1
             },
             {
-              "Line": 41,
-              "Offset": 104,
-              "EndOffset": 106,
+              "Line": 31,
+              "Offset": 88,
+              "EndOffset": 90,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 0
             },
             {
-              "Line": 41,
-              "Offset": 104,
-              "EndOffset": 110,
+              "Line": 31,
+              "Offset": 88,
+              "EndOffset": 94,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 0
@@ -602,15 +576,13 @@
         },
         "System.Void ReceiverVisitCount.TimeSplit::.ctor(System.Collections.Generic.List`1<System.String>)": {
           "Lines": {
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1,
             "17": 1,
-            "18": 1,
-            "19": 1,
-            "20": 1,
-            "21": 1,
-            "22": 1,
-            "23": 1,
-            "24": 1,
-            "25": 1
+            "18": 1
           },
           "Branches": []
         }
@@ -620,50 +592,46 @@
       "ReceiverVisitCount.WriteToCsvFile": {
         "System.Boolean ReceiverVisitCount.WriteToCsvFile::FootfallDayWeekCsvFileWriter(System.String,System.Single,System.String)": {
           "Lines": {
+            "12": 4,
             "14": 4,
+            "15": 4,
             "16": 4,
             "17": 4,
-            "18": 4,
-            "19": 4,
-            "21": 4,
+            "20": 4,
             "22": 4,
+            "23": 4,
             "24": 4,
-            "25": 4,
             "26": 4,
-            "28": 4,
-            "29": 4,
-            "30": 4,
             "31": 4,
             "32": 4,
             "33": 4,
             "34": 4,
             "35": 4,
-            "36": 4,
+            "38": 4,
             "39": 4,
             "40": 4,
             "41": 4,
-            "42": 4,
+            "43": 4,
             "44": 4,
-            "45": 4,
+            "46": 0,
             "47": 0,
             "48": 0,
             "49": 0,
-            "50": 0,
-            "52": 4
+            "51": 4
           },
           "Branches": [
             {
-              "Line": 49,
-              "Offset": 273,
-              "EndOffset": 275,
+              "Line": 48,
+              "Offset": 243,
+              "EndOffset": 245,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 0
             },
             {
-              "Line": 49,
-              "Offset": 273,
-              "EndOffset": 279,
+              "Line": 48,
+              "Offset": 243,
+              "EndOffset": 249,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
@@ -672,41 +640,38 @@
         },
         "System.Boolean ReceiverVisitCount.WriteToCsvFile::FootfallLastMonthCsvFileWriter(System.Int32,System.Int32)": {
           "Lines": {
-            "54": 2,
+            "53": 2,
+            "55": 2,
             "56": 2,
-            "57": 2,
             "58": 2,
-            "59": 2,
-            "61": 2,
-            "63": 2,
+            "60": 2,
             "64": 2,
             "65": 2,
-            "66": 2,
+            "67": 2,
             "68": 2,
             "69": 2,
             "70": 2,
-            "71": 2,
+            "72": 2,
             "73": 2,
-            "74": 2,
+            "75": 0,
             "76": 0,
             "77": 0,
             "78": 0,
-            "79": 0,
-            "81": 2
+            "80": 2
           },
           "Branches": [
             {
-              "Line": 78,
-              "Offset": 147,
-              "EndOffset": 149,
+              "Line": 77,
+              "Offset": 125,
+              "EndOffset": 127,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 0
             },
             {
-              "Line": 78,
-              "Offset": 147,
-              "EndOffset": 153,
+              "Line": 77,
+              "Offset": 125,
+              "EndOffset": 131,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0

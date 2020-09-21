@@ -88,7 +88,12 @@
       "restore": {
         "projectUniqueName": "C:\\Users\\deeks\\OneDrive\\Desktop\\Receiver\\ReceiverVisitCount\\ReceiverVisitCount\\ReceiverVisitCount.csproj",
         "projectName": "ReceiverVisitCount",
-        "projectPath": "C:\\Users\\deeks\\OneDrive\\Desktop\\Receiver\\ReceiverVisitCount\\ReceiverVisitCount\\ReceiverVisitCount.csproj"
+        "projectPath": "C:\\Users\\deeks\\OneDrive\\Desktop\\Receiver\\ReceiverVisitCount\\ReceiverVisitCount\\ReceiverVisitCount.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
       },
       "frameworks": {
         "net472": {}
