@@ -14,8 +14,11 @@ jobs:
       - name: Install resharper
         run: dotnet tool install -g JetBrains.ReSharper.GlobalTools
         
+      - name: Run resharper inspection
+        run: jb inspectcode visit-case.sln /output=insreport.xml
+       
       - name: Run resharper duplicate code check
-        run: jb dupfinder SenderVisitCount.sln -o=dupreport.xml
-
+        run: jb dupfinder visit-case.sln /output=dupreport.xml
+       
       - name: Check Reports
         run: powershell ./resharper.ps1
