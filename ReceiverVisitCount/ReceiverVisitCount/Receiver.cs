@@ -5,7 +5,7 @@
 
 namespace ReceiverVisitCount
 {
-    public class Receiver
+    class Receiver
     {
         public static void Main()
         {
