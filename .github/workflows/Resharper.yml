@@ -22,7 +22,7 @@ jobs:
         run: dotnet add SenderVisitCount/SenderVisitCount.Test/SenderVisitCount.Test.csproj package xunit --version 2.4.0
         
       - name: Add Package
-        run: dotnet add ReceiverVisitCount/ReceiverVisitCount.Test/ReceiverVisitCount.Test.csproj package xunit --version 2.4.0
+        run: dotnet add ReceiverVisitCount/ReceiverVisitCountTest/ReceiverVisitCountTest.csproj package xunit --version 2.4.0
         
       - name: Run resharper inspection
         run: jb inspectcode visit-case.sln /output=insreport.xml
