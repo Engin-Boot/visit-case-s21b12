@@ -1,4 +1,5 @@
-﻿using System;
+//ReSharper disable all
+using System;
 
 namespace SenderVisitCount
 {
@@ -12,3 +13,4 @@ namespace SenderVisitCount
         }
     }
 }
+//ReSharper restore all
