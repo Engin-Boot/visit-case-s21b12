@@ -65,7 +65,7 @@ namespace ReceiverVisitCountTest
             Assert.True(checkAvgWeek < 1.25F);
 
             var checkPeak = aggregatorObj.PeakDailyFooFallInLastMonth(dateList);
-            Assert.True(checkPeak < 6);
+            Assert.True(checkPeak < 30);
             
         }
     }
